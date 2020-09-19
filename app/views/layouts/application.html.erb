@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OrderApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <% if logged_in? %>
+    <%= link_to 'ログアウト', logout_path , method: :delete %>
+    <%= link_to current_user.name, "/user/show/#{current_user.id}" %>
+    <p>お届け先 <%= current_user.address %></p>
+  <% else %>
+    <h1>ログイン</h1>
+  <% end %>
+  <%= yield %>
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<h1>カート</h1>
+<% @orders.each do |t| %>
+  <td>ID<%= t.id %></td>
+  <td><%= t.name %></td>
+  <td><%= t.price %>円</td>
+  <td>数量<%= t.quantity %></td>
+  <br>
+<% end %>
+
+<%= link_to '決済', 'history/create' %>
