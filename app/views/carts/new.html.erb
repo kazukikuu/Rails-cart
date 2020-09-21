@@ -21,9 +21,11 @@
         <%= hidden_field_tag :name, @product.name %>
         <%= hidden_field_tag :price, @product.price %>
         <%= hidden_field_tag :image, "default" %>
+        <%= label_tag "数量"%><br/>
+        <%= number_field_tag :quantity,1 %>
         <div class="field">
-          <%= label_tag :quantity %><br/>
-          <%= text_field_tag :quantity,1 %>
+
+
         </div>
         <div class="actions">
           <%= submit_tag "カートに入れる" %>

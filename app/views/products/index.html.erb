@@ -1,10 +1,8 @@
-<h1>Products#index</h1>
-
 <% @product.each do |p| %>
   <tr> ID:<td><%= p.id %></td> </tr>
   <%= link_to p.name, "/cart/products/#{p.id}" %>
      <tr><td><%= p.price %>円</td></tr>
-
       <div class="image"></div>
+
 <% end %>
 

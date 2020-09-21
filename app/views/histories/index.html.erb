@@ -1,10 +1,11 @@
-<h1>カート</h1>
-<% @orders.each do |t| %>
-  <td>ID<%= t.id %></td>
-  <td><%= t.name %></td>
-  <td><%= t.price %>円</td>
+<h1>注文履歴</h1>
+<% @items.each do |t| %>
+<!--  <td>ID<%#= t.id %></td>-->
+  <td><%= t.product.name %></td>
+  <td><%= t.product.price %>円</td>
   <td>数量<%= t.quantity %></td>
+  <td><%= link_to 'キャンセルする', "/cancel/#{t.id}" %></td>
   <br>
 <% end %>
-
-<%= link_to '決済', 'history/create' %>
+<td>合計<%= @total %>円</td><br>
+<%= link_to 'キャンセルした注文', '/cancel/index' %>

@@ -17,8 +17,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-    @user = User.find(params[:id])
+
+  def update
+    @user = User.find_by(params[:id])
+    @user.update(email: params[:email],name: params[:name],address: params[:address])
+    redirect_to action: :show
   end
 
 

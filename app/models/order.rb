@@ -1,3 +1,3 @@
 class Order < ApplicationRecord
-  has_one :order_item
+  belongs_to :order_item
 end

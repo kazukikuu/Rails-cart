@@ -1,28 +1,23 @@
 <% @title = "ユーザー情報変更" %>
 <h1><%= @title %></h1>
 
-<div id="generic-form">
+    <%= form_with model: @user,local: true do |form|  %>
+  <br>
+  <%= label_tag 'Eメール' %>
+  <%= form.text_field :email %>
 
-  <%= form_tag signup_path, :method => :post do %>
-    <div class="field">
-      <%= label_tag :email %><br />
-      <%= text_field_tag :email %>
-    </div>
+  <br>
+  <%= label_tag '名前' %>
+      <%= form.text_field :name %>
+
+  <br>
+    <%= label_tag '住所' %>
+    <%= form.text_field :address %>
+
+  <br>
+
+      <%= form.submit %>
+
+    <% end %>
 
 
-    <div class="field">
-      <%= label_tag :name %><br />
-      <%= text_field_tag :name %>
-    </div>
-
-    <div class="field">
-      <%= label_tag :address %><br />
-      <%= text_field_tag :address %>
-    </div>
-
-
-    <div class="actions">
-      <%= submit_tag "登録" %>
-    </div>
-  <% end %>
-</div>

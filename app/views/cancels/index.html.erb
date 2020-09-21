@@ -1,0 +1,9 @@
+<h1>キャンセルした注文</h1>
+<% @items.each do |t| %>
+  <!--  <td>ID<%#= t.id %></td>-->
+  <td><%= t.product.name %></td>
+  <td><%= t.product.price %>円</td>
+  <td>数量<%= t.quantity %></td>
+  <br>
+<% end %>
+
