@@ -10,7 +10,6 @@ class CartsController < ApplicationController
         @total += price
     end
 
-
     end
 
   def new
