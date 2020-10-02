@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
-  # before_action :require_login
+  # skip_before_action :require_valid_token
+
   def index
+    # binding.pry
     @product = Product.all
     render json: @product
   end

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  # skip_before_filter :require_login
-  # skip_before_action :verify_authenticity_token
+  # skip_before_action :require_login
+  skip_before_action :require_valid_token
 
   def new
     @user = User.new
@@ -8,9 +8,13 @@ class SessionsController < ApplicationController
 
   def create
     if @user = login(login_user[:email], login_user[:password])
-      # api_key = @user.activate
-      # @access_token = api_key.access_token
-      redirect_to controller: 'products', action: 'index'
+
+      @login_user = User.find(current_user.id)
+      @login_user.access_token = SecureRandom.hex
+      @login_user.save
+      # binding.pry
+      render json: @login_user
+      # redirect_to controller: 'products', action: 'index'
     else
       flash.now[:alert] = 'login failed'
       render action: 'new'

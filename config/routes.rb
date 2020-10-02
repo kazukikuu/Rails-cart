@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
 
   root to: 'products#index'
-  # カートs
+  # カート
+  # post 'token' => "application#user_token"
+  post '/' => "products#require_valid_token"
+  get '/product' => "products#index"
   get 'cart/products/:id' => "carts#new"
   post 'cart/new' => "carts#create"
+  post 'cart/item' => "cart/product_params"
   get 'cart/index' => "carts#index"
   get 'cart/empty' => 'carts#empty'
   post 'cart/plus/:id' => 'carts#plus'

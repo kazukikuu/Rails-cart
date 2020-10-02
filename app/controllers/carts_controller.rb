@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-
+  skip_before_action :require_valid_token
 
   def index
     @carts = session[:cart]
@@ -8,8 +8,8 @@ class CartsController < ApplicationController
       @carts.each do |t|
         price =  t["price"].to_i * t["quantity"].to_i
         @total += price
-    end
-
+      end
+    render json: @carts
     end
 
   def new
@@ -18,9 +18,10 @@ class CartsController < ApplicationController
 
   def create
     if  session[:cart].nil?
-      session[:cart] = Array.new
+        session[:cart] = Array.new
     end
     session[:cart].push(product_params)
+
     redirect_to action: :index
   end
 
@@ -56,9 +57,7 @@ class CartsController < ApplicationController
   end
 
   def product_params
-    params.permit(:id,:name,:image,:price,:quantity)
+    params[:cart]
   end
-
-
   end
 
