@@ -5,11 +5,7 @@ class ApplicationController < ActionController::Base
     redirect_to login_path, alert: "please login first"
   end
 
-  def require_valid_token
-    puts login_user
-    # if login_user.nil?
-    #   return
-    # end
+  def require_valid_tokens
     access_token = login_user["token"]
     @user = User.find(login_user["id"])
     if @user.access_token == access_token
