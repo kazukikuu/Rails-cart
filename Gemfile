@@ -26,12 +26,12 @@ gem 'pry-byebug'
 gem 'bootstrap'
 
 gem 'rack-cors'
-
+gem 'pg'
 # 開発環境(ローカル)ではSQLite3を使用
-gem 'sqlite3', group: :development
+# gem 'sqlite3', group: :development
 
 # 本番環境(heroku)ではPostgreSQLを使用
-gem 'pg', group: :production
+# gem 'pg', group: :production
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
