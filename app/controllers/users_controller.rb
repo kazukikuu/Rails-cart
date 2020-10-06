@@ -7,14 +7,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path
+         render status: 200, json: { status: 200, message: '登録OK' }
     else
-      render :new
+        render status: 400
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.where(access_token: params[:token])
+    render json: @user
   end
 
 
@@ -28,6 +29,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:email, :password, :name, :address)
+    params["user"]
   end
 end

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
   # カート
-  # post 'token' => "application#user_token"
   post '/' => "products#require_valid_token"
   get '/product' => "products#index"
   get 'cart/products/:id' => "carts#new"
@@ -17,21 +16,21 @@ Rails.application.routes.draw do
 
   # 履歴
   get 'history/index' => "histories#index"
-  get 'cart/history/create' => "histories#create"
+  post 'cart/history/create' => "histories#create"
   # セッション
   resources :sessions, only: [:create,:new]
   # 注文キャンセル
   get 'cancel/index' => "cancels#index"
-  get 'cancel/:id' => "cancels#update"
+  post '/cancel' => "cancels#update"
 
   # ユーザー新規登録
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
   # ユーザー編集
-  get 'user/:id' => 'users#edit'
-  post 'user/:id' => 'users#update'
-  get 'user/show/:id' => 'users#show'
+  # get 'user/:id' => 'users#edit'
+  # post 'user/:id' => 'users#update'
+  get 'user/show' => 'users#show'
 
   # ログイン・ログアウト
   get 'login' => 'sessions#new'

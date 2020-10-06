@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  skip_before_action :require_valid_token
+  # skip_before_action :require_valid_token
 
   def index
     @carts = session[:cart]
