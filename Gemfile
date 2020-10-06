@@ -6,7 +6,7 @@ ruby '2.6.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -26,6 +26,12 @@ gem 'pry-byebug'
 gem 'bootstrap'
 
 gem 'rack-cors'
+
+# 開発環境(ローカル)ではSQLite3を使用
+gem 'sqlite3', group: :development
+
+# 本番環境(heroku)ではPostgreSQLを使用
+gem 'pg', group: :production
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
