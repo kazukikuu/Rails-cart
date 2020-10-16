@@ -34,7 +34,7 @@ end
 
 # 本番環境ではPostgresqlを使う
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'sqlite3'
 end
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
