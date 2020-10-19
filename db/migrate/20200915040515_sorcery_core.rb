@@ -6,7 +6,8 @@ class SorceryCore < ActiveRecord::Migration[6.0]
       t.string :address
       t.string :crypted_password
       t.string :salt
-
+      t.string :access_token
+      t.boolean :status, default: false
       t.timestamps                null: false
     end
 
