@@ -4,7 +4,7 @@ lock "~> 3.14.1"
 set :application, "Rails-cart"
 set :repo_url, "https://github.com/kazukikuu/Rails-cart"
 
-set :branch, 'master'
+set :branch, 'Deploy'
 
 set :deploy_to, '/var/www/Rails-cart'
 
