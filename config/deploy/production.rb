@@ -32,7 +32,7 @@
 # Feel free to add new variables to customise your setup.
 
 
-server '153.127.23.143', user: 'root', roles: %w{app db web} 
+server '153.127.23.143', user: 'root', roles: %w{app db web}
 
 
 
