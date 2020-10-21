@@ -6,7 +6,7 @@ set :repo_url, "https://github.com/kazukikuu/Rails-cart"
 
 set :branch, 'Deploy'
 
-set :deploy_to, '/var/www/Rails-cart'
+set :deploy_to, '/var/www/rails/Rails-cart'
 
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
 
@@ -14,7 +14,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 set :keep_releases, 5
 
+set :rbenv_type, :user
 set :rbenv_ruby, '2.6.4'
+set :rbenv_path, '/root/.rbenv'
 
 set :log_level, :debug
 
