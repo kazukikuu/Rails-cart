@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
@@ -33,8 +33,12 @@ group :development, :test do
 end
 
 # 本番環境ではPostgresqlを使う
-group :production do
-  gem 'sqlite3'
+# group :production do
+#   gem 'sqlite3'
+# end
+
+group :production, :staging do
+  gem 'mysql2'
 end
 
 group :development, :test do
