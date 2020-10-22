@@ -16,7 +16,7 @@ set :keep_releases, 5
 
 
 set :rbenv_type, :user
-# set :rbenv_ruby, '2.6.1'
+set :rbenv_ruby, '2.6.1'
 set :rbenv_path, '/usr/local/rbenv'
 
 set :log_level, :debug
