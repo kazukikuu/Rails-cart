@@ -38,7 +38,7 @@ end
 # end
 
 group :production, :staging do
-  gem 'mysql2'
+  gem 'mysql2', '~>0.5.3'
 end
 
 group :development, :test do
