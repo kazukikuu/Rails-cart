@@ -6,6 +6,8 @@ set :repo_url, "https://github.com/kazukikuu/Rails-cart"
 
 set :branch, 'Deploy'
 
+append :linked_files, 'config/credentials/production.key'
+
 set :deploy_to, '/var/www/rails/Rails-cart'
 
 set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
