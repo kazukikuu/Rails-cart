@@ -32,13 +32,9 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-# 本番環境ではPostgresqlを使う
-# group :production do
-#   gem 'sqlite3'
-# end
 
 group :production, :staging do
-  gem 'mysql2', '~>0.5.3'
+  gem 'mysql2'
 end
 
 group :development, :test do

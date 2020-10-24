@@ -1,5 +1,5 @@
 current directory: /Users/ikuta/Desktop/order-app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
-/Users/ikuta/.rbenv/versions/2.6.1/bin/ruby -I /Users/ikuta/.rbenv/versions/2.6.1/lib/ruby/2.6.0 -r ./siteconf20201023-12117-3jac7t.rb extconf.rb
+/Users/ikuta/.rbenv/versions/2.6.1/bin/ruby -I /Users/ikuta/.rbenv/versions/2.6.1/lib/ruby/2.6.0 -r ./siteconf20201024-10389-sy98cv.rb extconf.rb
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for -ldl... yes
@@ -60,4 +60,4 @@ linking shared-object sqlite3/sqlite3_native.bundle
 
 current directory: /Users/ikuta/Desktop/order-app/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.2/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20201023-12117-jz8awy/sqlite3
+/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20201024-10389-19p85m3/sqlite3
