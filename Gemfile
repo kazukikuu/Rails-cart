@@ -34,7 +34,7 @@ end
 
 
 group :production, :staging do
-  gem 'sqlite3'
+  gem 'mysql2'
 end
 
 group :development, :test do
