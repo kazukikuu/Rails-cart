@@ -22,7 +22,7 @@ test:
 
 production:
   <<: *default
-  database: pictweet_production
+  database: mysql2
   username: root
   password: Password-1234
   socket: /var/lib/mysql/mysql.sock
