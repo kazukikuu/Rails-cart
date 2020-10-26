@@ -37,6 +37,8 @@ group :production, :staging do
   gem "mysql2"
 end
 
+# コメント
+
 group :development, :test do
   gem 'capistrano'
   gem 'capistrano-bundler'
