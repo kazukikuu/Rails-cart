@@ -37,7 +37,7 @@ group :production, :staging do
   gem "mysql2"
 end
 
-# コメント
+# コメント1
 
 group :development, :test do
   gem 'capistrano'
