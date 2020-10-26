@@ -22,7 +22,7 @@ test:
 
 production:
   <<: *default
-  database: mysql2
+  database: db/development.sqlite3
   username: root
   password: Password-1234
   socket: /var/lib/mysql/mysql.sock
