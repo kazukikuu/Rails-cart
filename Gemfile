@@ -28,13 +28,13 @@ gem 'bootstrap'
 gem 'rack-cors'
 
 # 開発・テスト環境ではSQLite3を使う
-group :development, :test do
-  gem 'sqlite3'
-end
+# group :development, :test do
+#   gem 'sqlite3'
+# end
 
 
 group :production, :staging do
-  gem 'sqlite3'
+  gem "mysql2"
 end
 
 # コメント
