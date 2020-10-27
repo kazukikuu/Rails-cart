@@ -274,7 +274,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  mysql2
+  mysql2 (~> 0.5.3)
   pry-byebug
   pry-rails
   puma (~> 4.1)
