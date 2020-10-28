@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: db/production.sqlite3
+  database: db/production.mysql
 #  socket: /tmp/mysql.sock
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,7 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/production.mysql
   username: root
   password: Password-1234
   socket: /var/lib/mysql/mysql.sock
