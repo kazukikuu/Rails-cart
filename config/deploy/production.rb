@@ -47,7 +47,7 @@ server '153.127.23.143', user: 'root', roles: %w{app db web}
  set :ssh_options, {
    keys: %w(/Users/ikuta/.ssh/id_rsa),
    forward_agent: false,
-   auth_methods: %w(publickey)
+   auth_methods: %w(password)
  }
 #
 # The server-based syntax can be used to override options:
