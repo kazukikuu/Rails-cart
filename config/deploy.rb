@@ -4,6 +4,9 @@ lock "~> 3.14.1"
 set :application, "Rails-cart"
 set :repo_url, "https://github.com/kazukikuu/Rails-cart"
 
+# 追加
+set :pty, true
+
 set :branch, 'Deploy'
 
 append :linked_files, 'config/credentials/production.key'
