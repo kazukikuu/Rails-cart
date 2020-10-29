@@ -11,7 +11,8 @@ default: &default
 
 development:
   <<: *default
-  database: db/production.mysql
+  database: rails
+
 #  socket: /tmp/mysql.sock
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,8 +23,8 @@ test:
 
 production:
   <<: *default
-  database: rails.mysql
-  username: root
+  database: rails
+  username: kazuki
   password: Password-1234
   socket: /var/lib/mysql/mysql.sock
   adapter: mysql2
