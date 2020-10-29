@@ -475,6 +475,24 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="capistrano3-unicorn (vbundled(0.2.1)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capistrano3-unicorn-0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capistrano3-unicorn-0.2.1/examples" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capistrano3-unicorn-0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capistrano3-unicorn-0.2.1/examples" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capistrano3-unicorn-0.2.1/examples" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="capybara (vbundled(3.33.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
@@ -1974,15 +1992,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="zeitwerk (vbundled(2.4.0)) [path][gem]" type="rubylib">
+      <library name="zeitwerk (vbundled(2.4.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/zeitwerk-2.4.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/zeitwerk-2.4.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/zeitwerk-2.4.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/zeitwerk-2.4.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>

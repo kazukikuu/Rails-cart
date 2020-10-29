@@ -20,7 +20,7 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-
+#デプロイ
 production:
   <<: *default
   database: rails
