@@ -23,15 +23,14 @@ require 'capistrano/setup'
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 
-
+# デプロイ
 require 'capistrano/deploy'
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 require 'capistrano/rbenv' 
 require 'capistrano/bundler'
 require 'capistrano/rails/assets' 
-require 'capistrano/rails/migrations' 
-require 'lib/capistrano/tasks/unicorn.rb'
+require 'capistrano/rails/migrations'
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
