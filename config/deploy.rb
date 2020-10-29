@@ -55,19 +55,6 @@ namespace :deploy do
     end
   end
 
-  task :start do
-    run "bundle exec unicorn_rails -c #{current_path}/config/unicorn.rb -E production -D"
-  end
-
-  task :stop do
-    run "kill -QUIT `cat #{current_path}/tmp/pids/unicorn.pid`"
-  end
-
-  task :restart do
-    run "kill -USR2 `cat #{current_path}/tmp/pids/unicorn.pid`"
-    run "kill -QUIT `cat #{current_path}/tmp/pids/unicorn.pid.oldbin`"
-  end
-
 
 
   after :publishing, :restart
