@@ -31,7 +31,7 @@ require 'capistrano/rbenv'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets' 
 require 'capistrano/rails/migrations' 
-require 'capistrano/unicorn'
+require 'lib/capistrano/tasks/unicorn.rb'
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
