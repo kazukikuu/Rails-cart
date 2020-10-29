@@ -22,7 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.mysql
+  database: rails.mysql
   username: root
   password: Password-1234
   socket: /var/lib/mysql/mysql.sock
